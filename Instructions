@@ -1,0 +1,27 @@
+Arduino IDE setup (one-time)
+1.	Install Arduino IDE (or use VS Code PlatformIO).
+2.	Add ESP32 board support: Tools → Manage Libraries → install esp32 by Espressif Systems.
+•	The one you need is:
+Blynk by Volodymyr Shymanskyy (current version 1.3.2)
+👉 Click Install on that.
+⚠️ Do NOT install BlynkESP32_BT_WF or BlynkEthernet_Manager — those are for special cases. Stick with the official Blynk library.
+3.	Library Manager → install Blynk library.
+4.	In Tools, select the correct ESP32 board and the COM port.
+For DHT11 sensor
+Install this library:
+•	“DHT sensor library for ESPx by beegee_tokyo”
+
+Note:
+If the ESP32 not compiling/ not uploading, do the following step also:
+•	File → Preferences → Additional boards manager URLs
+Paste
+"https://arduino.esp8266.com/stable/package_esp8266com_index.json"
+and click OK.
+ 
+Create a Blynk project & get the Auth token
+1.	Install the Blynk app on your phone (Blynk IoT / Blynk app depending on which you use).
+2.	Create a New Device / New Project → choose ESP32 Dev Board (or similar).
+3.	Add a Button widget to the project.
+o	Set the Button’s Output to V0 (Virtual Pin V0).
+o	Set widget to Switch (not push).
+4.	Copy the Auth Token / Device Token— you’ll paste it in the code.
