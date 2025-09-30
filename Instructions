@@ -25,3 +25,61 @@ Create a Blynk project & get the Auth token
 o	Set the Button’s Output to V0 (Virtual Pin V0).
 o	Set widget to Switch (not push).
 4.	Copy the Auth Token / Device Token— you’ll paste it in the code.
+
+For Tem_Hum_Blynk
+
+Wiring Connection
+
+DHT VCC → 3V3 on ESP32
+DHT GND → GND on ESP32
+DHT DATA → GPIO 4 on ESP32 (you can change in code)
+
+✅ Widgets to Add
+Radial Gauge (or simple Gauge)
+Use for Temperature
+Datastream: V1
+Range: e.g., 0 → 50 (Celsius)
+
+Radial Gauge (second one)
+Use for Humidity
+Datastream: V2
+Range: e.g., 0 → 100 (%)
+
+For Motor_blynk
+
+Wiring Connections
+
+Motor Driver → Motors
+IN1, IN2 → Left Motor A
+IN3, IN4 → Right Motor B
+Motor driver +12V → Battery (+)
+Motor driver GND → Battery (–) + ESP32 GND
+
+ESP32 → Motor Driver
+GPIO 26 → IN1
+GPIO 27 → IN2
+GPIO 14 → IN3
+GPIO 12 → IN4
+Enable pins of motor driver → permanently tied to 5V (or PWM pins if speed control needed)
+
+Blynk setup
+
+Using Blynk mobile app, create a new template and add a joystick
+Configure the Joystick Widget:
+V0 Datastream (for Y-axis):
+Name: Y-Axis Control (or similar)
+Pin: V0
+Data Type: Integer
+Min: -1000
+Max: 1000
+Default Value: 0
+Automation Type: Sensor
+
+V1 Datastream (for X-axis):
+Name: X-Axis Control (or similar)
+Pin: V1
+Data Type: Integer
+Min: -1000
+Max: 1000
+Default Value: 0
+Automation Type: Sensor
