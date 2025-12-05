@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL30DOW74Jd"
-#define BLYNK_TEMPLATE_NAME "Quickstart Template"
-#define BLYNK_AUTH_TOKEN "L4DRldrrMXt2HssM_EJkRMuiFCf3dFak"
+#define BLYNK_TEMPLATE_ID "TMPL3LmrL-qj-"
+#define BLYNK_TEMPLATE_NAME "Joystick "
+#define BLYNK_AUTH_TOKEN "dN3wFLPmYn9m71ziTGYg1MowXXBEN5Q9"
 
 #include <WiFi.h>
 #include <WiFiClient.h>
